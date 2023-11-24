@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bs-blue-dark);
+}
+
+/* BACKGROUNDS */
+
+
+
+/* COLORS */
+
+:root {
+    --bs-white: #fff;
+    --bs-white-light:#E9EBF81F !important;
+
+    --bs-blue-light: #e6e7e9;
+    --bs-blue-light-hover: #dadade;
+    --bs-blue-light-active:##b2b3bb;
+    --bs-blue-normal: #060b24;
+    --bs-blue-normal-hover: #050a20;
+    --bs-blue-normal-active: #05091d;
+    --bs-blue-dark: #05081b;
+    --bs-blue-dark-hover: #040716;
+    --bs-blue-dark-active: #030510;
+    --bs-blue-darker: #02040d;
+
+    --bs-orange-light: #fdedec;
+    --bs-orange-light-hover: #fbe4e2;
+    --bs-orange-light-active:##f8c8c3;
+    --bs-orange-normal: #e74c3c;
+    --bs-orange-normal-hover: #d04436;
+    --bs-orange-normal-active: #b93d30;
+    --bs-orange-dark: #ad392d;
+    --bs-orange-dark-hover: #8b2e24;
+    --bs-orange-dark-active: #68221b;
+    --bs-orange-darker: #511b15;
+
+  }
+
+
+.white {
+    color: var(--bs-white);
+}
+
+
+.blue-light {
+    color: var(--bs-blue-light);
+}
+.blue-light-hover {
+    color: var(--bs-blue-light-hover);
+}
+.blue-light-active {
+    color: var(--bs-blue-light-active);
+}
+.blue-normal {
+    color: var(--bs-blue-normal);
+}
+.blue-normal-hover {
+    color: var(--bs-blue-normal-hover);
+}
+.blue-normal-active {
+    color: var(--bs-blue-normal-active);
+}
+.blue-dark{
+    color: var(--bs-blue-dark);
+}
+.blue-dark-hover {
+    color: var(--bs-blue-dark-hover);
+}
+.blue-dark-active {
+    color: var(--bs-blue-dark-active);
+}
+.blue-darker {
+    color: var(--bs-blue-darker);
+}
+
+
+.orange-light {
+    color: var(--bs-orange-light);
+}
+.orange-light-hover {
+    color: var(--bs-orange-light-hover);
+}
+.orange-light-active {
+    color: var(--bs-orange-light-active);
+}
+.orange-normal {
+    color: var(--bs-orange-normal);
+}
+.orange-normal-hover {
+    color: var(--bs-orange-normal-hover);
+}
+.orange-normal-active {
+    color: var(--bs-orange-normal-active);
+}
+.orange-dark{
+    color: var(--bs-orange-dark);
+}
+.orange-dark-hover {
+    color: var(--bs-orange-dark-hover);
+}
+.orange-dark-active {
+    color: var(--bs-orange-dark-active);
+}
+.orange-darker {
+    color: var(--bs-orange-darker);
+}
+
+.black {
+    color: #000;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+
+/* ---------------------------------------------------- */
+
+
+
+/* Botões */
+.btn-orange {
+    height: 47px;
+    border-radius: 30px;
+    border: 2px solid #E74C3C;
+    color: var(--bs-orange-normal);
+}
+.btn-orange:hover {
+    color: var(--bs-orange-normal-hover);
+    border: 2px solid var(--bs-orange-normal-hover);
+}
+.btn-orange-normal {
+    background-color: var(--bs-orange-normal);
+    color: var(--bs-white);
+    padding: 1rem;
+    border-radius: 40px;
+}
+.btn-orange-normal:hover {
+    background-color: var(--bs-orange-normal-hover);
+    color: var(--bs-white);
+}
+.btn-topic {
+    border: 1px solid var(--bs-white-light);
+    background: none;
+    color: var(--bs-orange-normal);
+    padding: 0.5em 1em;
+    border-radius: 30px;
+    font-size: 14px;
+}
+.btn-next {
+    background-color: var(--bs-orange-normal);
+    width: fit-content;
+    padding: 1em;
+    border-radius: 40px;
+}
+.btn-next:hover {
+    background-color: var(--bs-orange-normal-hover);
+}
+.btn-back {
+    background-color: var(--bs-blue-normal);
+    width: fit-content;
+    padding: 1em;
+    border-radius: 40px;
+}
+.btn-back:hover {
+    background-color: var(--bs-blue-normal-hover);
+}
+/* ---------------------------------------------------- */
+
+
+/* NAV */
+.border-bottom {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--bs-white-light) !important;
+}
+
+
+/* ---------------------------------------------------- */
+
+
+/* Background Header */
+.bg-header {
+    background-image: url(../../assets/images/bg-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 972px;
+    padding: 0px 64px 0px 60px;
+    flex-shrink: 0;
+}
+
+
+/* ---------------------------------------------------- */
+
+/* Curso */
+
+.bg-gradient1 {
+    background: radial-gradient(50% 50% at 50% 50%, #0e163c 0%, var(--bs-blue-dark) 100%);
+    background-blend-mode: color-dodge;
+}
+
+.divisor {
+    width: 30px;
+    height: 5px;
+    background: #E74C3C;
+}
+
+/* ---------------------------------------------------- */
+
+
+/* Slider */
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+.card {
+    width: 500px;
+    height: 300px;
+    margin: 0.5em;
+    padding: 1em;
+    background-color: var(--bs-blue-normal);
+    min-width: 200px; /* Largura mínima dos cards */
+    transition: transform 0.5s ease-in-out; /* Transição suave para o movimento */
+    flex: 0 0 auto; /* Impede que os cards sejam redimensionados */
+}
+.focused {
+    background-color: var(--bs-orange-normal) !important;
+  }
+
+
+
+/* ---------------------------------------------------- */
+
+/* Footer */
+.footer {
+    border-top: 1px solid rgba(233, 235, 248, 0.12);
+    padding: 4em 0;
+}
