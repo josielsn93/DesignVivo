@@ -79,7 +79,7 @@
 
 }
 .accordion-button::after {
-    background-image: url(/assets/images/plus.svg);
+    background-image: url(../../assets/images/plus.svg);
 }
 .accordion-item {
     color: var(--bs-white);
