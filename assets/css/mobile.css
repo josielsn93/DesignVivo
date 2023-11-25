@@ -29,7 +29,7 @@
 
 @media screen and (max-width: 600px) {
     .navbar {
-        --bs-navbar-toggler-icon-bg: url(/assets/images/menu.svg);
+        --bs-navbar-toggler-icon-bg: url(../../../assets/images/menu.svg);
     }
     .bg-menu-mobile {
         background-color: #15014994;
@@ -46,5 +46,9 @@
     }
     .navbar-brand {
         width: 60%;
+    }
+    .position-top {
+        bottom: 0;
+        top: 1rem
     }
 }
