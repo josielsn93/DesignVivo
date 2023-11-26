@@ -17,22 +17,55 @@
             <img src="assets/images/Logo.png" alt="">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon" onclick="expandContent()"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarText">
-            <ul class="navbar-nav mb-2 mb-lg-0 ">
-              <li class="nav-item mx-3">
+          <div class="overlay" id="overlay">
+            <div class="content">
+              <button class="close-button" onclick="closeContent()">
+                <i class="fas fa-times"></i>X
+              </button>
+              <ul class="navbar-nav mb-lg-0">
+                <li class="nav-item mx-3 mt-2 align-items-center">
+                  <a class="nav-link white " aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item mx-3 mt-2">
+                  <a class="nav-link white" href="#curso">Curso</a>
+                </li>
+                <li class="nav-item mx-3 mt-2">
+                  <a class="nav-link white" href="#depoimentos">Depoimentos</a>
+                </li>
+                <li class="nav-item mx-3 d-none d-lg-block">
+                  <a class="nav-link" href="#">
+                      <button class="btn btn-orange px-5">Acessar</button>
+                  </a>
+                </li>
+                <li class="nav-item mx-3 d-lg-none">
+                  <a class="nav-link" href="#">
+                    <a class="nav-link orange-normal" href="#depoimentos">Acessar</a>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse justify-content-end d-none" id="navbarText">
+            <ul class="navbar-nav mb-lg-0">
+              <li class="nav-item mx-3 mt-2 align-items-center">
                 <a class="nav-link white " aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item mx-3">
+              <li class="nav-item mx-3 mt-2">
                 <a class="nav-link white" href="#curso">Curso</a>
               </li>
-              <li class="nav-item mx-3">
+              <li class="nav-item mx-3 mt-2">
                 <a class="nav-link white" href="#depoimentos">Depoimentos</a>
               </li>
-              <li class="nav-item mx-3">
-                <a lass="nav-link" href="#">
+              <li class="nav-item mx-3 d-none d-lg-block">
+                <a class="nav-link" href="#">
                     <button class="btn btn-orange px-5">Acessar</button>
+                </a>
+              </li>
+              <li class="nav-item mx-3 d-lg-none">
+                <a class="nav-link" href="#">
+                  <a class="nav-link orange-normal" href="#depoimentos">Acessar</a>
                 </a>
               </li>
             </ul>
@@ -261,19 +294,41 @@
     </section>
     <footer>
         <div class="container footer">
-            <div class="row">
-                <div class="col-lg-12 d-flex justify-content-between">
-                    <p class="mb-0 white text-start">© 2023 Website - Todos os direitos reservados.
+            <div class="row justify-content-center">
+                <div class="col-lg-12 d-lg-flex  justify-content-between">
+                    <p class="mb-2 white text-center">© 2023 Website - Todos os direitos reservados.
                     </p>
-                    <div class="d-flex">
-                        <p class="mb-0 mx-3 white text-start">Políticas de privacidade</p>
-                        <p class="mb-0 mx-3 white text-start">Termos de uso</p>
+                    <div class="d-lg-flex d-block">
+                        <p class="mb-2 mx-3 white text-center">Políticas de privacidade</p>
+                        <p class="mb-0 mx-3 white text-center">Termos de uso</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-                
+    <!-- Barra de progresso -->
+  <div id="progress-bar" class="progress d-lg-none d-flex">
+    <div id="progress" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    // Função para calcular a porcentagem de rolagem e atualizar a barra de progresso
+    function updateProgressBar() {
+      const scrollTop = $(window).scrollTop();
+      const documentHeight = $(document).height();
+      const windowHeight = $(window).height();
+      const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+
+      $('#progress').css('width', scrollPercent + '%').attr('aria-valuenow', scrollPercent);
+    }
+
+    // Atualizar a barra de progresso quando a página é rolada
+    $(document).on('scroll', updateProgressBar);
+
+    // Chamar a função para atualizar a barra de progresso quando a página carregar
+    $(document).ready(updateProgressBar);
+  </script>            
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
@@ -304,6 +359,16 @@
           });
         });
       });
+
+      function expandContent() {
+      const overlay = document.getElementById('overlay');
+      overlay.classList.add('active');
+    }
+
+    function closeContent() {
+      const overlay = document.getElementById('overlay');
+      overlay.classList.remove('active');
+    }
     </script>  
 </body>
 </html>
